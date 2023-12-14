@@ -1,0 +1,18 @@
+- name: Pretend to provision a server
+  hosts: example
+  tasks:
+    - name: Create DNS entry
+      ansible.builtin.debug:
+        msg: "Creating DNS entry..."
+    
+    - name: Pause for 15 seconds
+      ansible.builtin.pause:
+        seconds: 15
+      
+    - name: Provision server
+      ansible.builtin.debug:
+        msg: "Provisioning server..."
+
+    - name: Pause for 1 minute
+      ansible.builtin.pause:
+        minutes: 1
